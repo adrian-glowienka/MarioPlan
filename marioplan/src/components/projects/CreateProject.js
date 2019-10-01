@@ -16,6 +16,7 @@ import { createProject } from '../../store/actions/projectActions'
 
     handleSubmit = (e) => {
         e.preventDefault();
+        this.props.createProject(this.state)
     }
 
     render() {
@@ -47,4 +48,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect()(CreateProject);
+export default connect(null, mapDispatchToProps)(CreateProject);
